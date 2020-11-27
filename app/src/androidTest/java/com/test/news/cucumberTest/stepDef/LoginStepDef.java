@@ -21,7 +21,9 @@ public class LoginStepDef {
 
     @Then("^login screen with (\\S+) and (\\S+) entries and (\\S+) is displayed$")
     public void login_screen_with_user_and_password_entries_and_login_button_is_displayed(String userLabel, String passwordLabel,String buttonLabel) {
-
+        LoginPage.isLabelDisplayed(userLabel);
+        LoginPage.isLabelDisplayed(passwordLabel);
+        LoginPage.isLabelDisplayed(buttonLabel);
     }
 
 
