@@ -1,13 +1,21 @@
 package com.test.news.cucumberTest.stepDef;
 
+import androidx.test.rule.ActivityTestRule;
+
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
+import com.test.news.cucumberTest.espresso.login.LoginScreenRobot;
 import com.test.news.cucumberTest.pages.CommonPage;
 import com.test.news.cucumberTest.pages.LoginPage;
+import com.test.news.features.login.presentation.LoginActivity;
 
 public class LoginStepDef {
+
+    private LoginScreenRobot robot = new LoginScreenRobot();
+
+    private ActivityTestRule<LoginActivity> activityRule = new ActivityTestRule<>(LoginActivity.class);
 
     @Given("^the user opens app for the first time$")
     public void the_user_opens_app_for_the_first_time() {
