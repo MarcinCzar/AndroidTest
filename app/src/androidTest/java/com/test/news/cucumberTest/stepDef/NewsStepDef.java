@@ -1,8 +1,7 @@
 package com.test.news.cucumberTest.stepDef;
 
-import com.test.news.cucumberTest.Page.LoginPage;
-import com.test.news.cucumberTest.Page.NewsPage;
-import com.test.news.cucumberTest.Page.CommonPage;
+import com.test.news.cucumberTest.pages.LoginPage;
+import com.test.news.cucumberTest.pages.CommonPage;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;

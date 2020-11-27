@@ -1,4 +1,4 @@
-package com.test.news.cucumberTest.Page;
+package com.test.news.cucumberTest.pages;
 
 import static androidx.test.espresso.Espresso.onView;
 import static androidx.test.espresso.assertion.ViewAssertions.matches;

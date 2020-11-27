@@ -4,13 +4,8 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
-import com.test.news.cucumberTest.Page.CommonPage;
-import com.test.news.cucumberTest.Page.LoginPage;
-import com.test.news.cucumberTest.Page.NewsPage;
-import com.test.news.features.login.presentation.LoginActivity;
-
-import org.junit.Assert;
-import org.junit.Rule;
+import com.test.news.cucumberTest.pages.CommonPage;
+import com.test.news.cucumberTest.pages.LoginPage;
 
 public class LoginStepDef {
 
