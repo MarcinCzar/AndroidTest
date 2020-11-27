@@ -1,15 +1,20 @@
 package com.test.news.cucumberTest.pages;
 
-import com.test.news.R;
+import androidx.test.rule.ActivityTestRule;
 
+import com.test.news.R;
+import com.test.news.features.login.presentation.LoginActivity;
 import static androidx.test.espresso.Espresso.onView;
 import static androidx.test.espresso.action.ViewActions.clearText;
 import static androidx.test.espresso.action.ViewActions.click;
 import static androidx.test.espresso.action.ViewActions.typeText;
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
-import static androidx.test.espresso.matcher.ViewMatchers.withText;
 
 public class LoginPage {
+
+    public void launchLoginScreen(ActivityTestRule<LoginActivity> testRule) {
+        testRule.launchActivity(null);
+    }
 
     public static void AddUserName(String userName) {
         onView(withId(R.id.editTextUserName))

@@ -13,11 +13,11 @@ Feature: Login Test Feature
   Scenario Outline : User login failed
     Given the user provided <userName> and <password>
     When login button is clicked
-    Then error markers are displayed by user or and password entries
+    Then error <errorLabel> are displayed by user or and password entries
     Examples:
-      | userName       | password |
-      | test1          | password |
-      | user1          | test1    |
+      | userName       | password | errorLabel     |
+      | test1          | password | Wrong user name|
+      | user1          | test1    | Wrong password |
 
   @e2e @smoke
   Scenario Outline : User login succeed
@@ -32,8 +32,3 @@ Feature: Login Test Feature
   Scenario  : User user opens app next time
     Given user opens app next time
     Then user is taken to the news screen
-
-
-
-
-

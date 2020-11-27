@@ -12,4 +12,8 @@ public class CommonPage {
                 .check(matches(isDisplayed()));
     }
 
+    public static void isInternetConnected(){
+        // to do
+    }
+
 }
