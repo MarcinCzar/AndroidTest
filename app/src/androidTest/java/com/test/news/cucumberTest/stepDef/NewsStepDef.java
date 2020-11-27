@@ -2,6 +2,7 @@ package com.test.news.cucumberTest.stepDef;
 
 import com.test.news.cucumberTest.Page.LoginPage;
 import com.test.news.cucumberTest.Page.NewsPage;
+import com.test.news.cucumberTest.Page.CommonPage;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -13,10 +14,6 @@ public class NewsStepDef {
             LoginPage.LoginToApplication(userName, password);
         }
 
-    @When("^I test it for Palindrome$")
-        public void iTestItForPalindrome() {
-
-        }
 
     @Then("^images are displayed in the rows on the list$")
         public void images_are_displayed_in_the_rows_on_the_list() {
@@ -30,7 +27,7 @@ public class NewsStepDef {
 
     @Then("^(\\S+) is displayed and Retry button$")
     public void error_is_displayed_and_Retry_button(String errorMessage) {
-
+        CommonPage.isLabelDisplayed(errorMessage);
     }
 
     @When("^the news images are successfully loaded on the screen$")
@@ -47,4 +44,5 @@ public class NewsStepDef {
     public void user_is_navigated_to_the_external_browser_with_clicked_image_loaded(){
 
     }
+
 }

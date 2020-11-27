@@ -3,6 +3,8 @@ package com.test.news.cucumberTest.stepDef;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+
+import com.test.news.cucumberTest.Page.CommonPage;
 import com.test.news.cucumberTest.Page.LoginPage;
 import com.test.news.cucumberTest.Page.NewsPage;
 import com.test.news.features.login.presentation.LoginActivity;
@@ -12,8 +14,6 @@ import org.junit.Rule;
 
 public class LoginStepDef {
 
-
-
     @Given("^the user opens app for the first time$")
     public void the_user_opens_app_for_the_first_time() {
 
@@ -21,9 +21,9 @@ public class LoginStepDef {
 
     @Then("^login screen with (\\S+) and (\\S+) entries and (\\S+) is displayed$")
     public void login_screen_with_user_and_password_entries_and_login_button_is_displayed(String userLabel, String passwordLabel,String buttonLabel) {
-        LoginPage.isLabelDisplayed(userLabel);
-        LoginPage.isLabelDisplayed(passwordLabel);
-        LoginPage.isLabelDisplayed(buttonLabel);
+        CommonPage.isLabelDisplayed(userLabel);
+        CommonPage.isLabelDisplayed(passwordLabel);
+        CommonPage.isLabelDisplayed(buttonLabel);
     }
 
 
@@ -52,4 +52,5 @@ public class LoginStepDef {
     public void user_opens_app_next_time(){
 
     }
+
 }

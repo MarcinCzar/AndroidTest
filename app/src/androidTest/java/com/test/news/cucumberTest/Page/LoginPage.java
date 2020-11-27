@@ -16,8 +16,6 @@ import static androidx.test.espresso.matcher.ViewMatchers.withText;
 
 public class LoginPage {
 
-
-
     public static void AddUserName(String userName) {
         onView(withId(R.id.editTextUserName))
                 .perform(clearText(), typeText(userName));
@@ -37,12 +35,5 @@ public class LoginPage {
         AddPassword(password);
         ClickOnLogin();
     }
-
-    public static void isLabelDisplayed(String value) {
-        onView(withText(value))
-                .check(matches(isDisplayed()));
-    }
-
-
 
 }
